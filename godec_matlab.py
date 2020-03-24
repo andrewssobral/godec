@@ -1,8 +1,9 @@
 #%% Import libraries
+import time
 import scipy.io as sio
 
 from godec import godec
-from utils import play_2d_video, plot_2d_results, plot_2d_results_mean, play_2d_results
+from utils import play_2d_video, play_2d_results
 
 #%% Load data
 mat = sio.loadmat('dataset/demo.mat')
@@ -12,13 +13,10 @@ M, height, width = mat['M'], int(mat['m']), int(mat['n'])
 play_2d_video(M, width, height)
 
 #%% Decompose
-L, S, LS,  _ = godec(M)
-
-#%% Plot results
-plot_2d_results(M, LS, L, S, width, height)
-
-#%% Plot mean results
-plot_2d_results_mean(M, LS, L, S, width, height)
+t = time.time()
+L, S, LS, _ = godec(M)
+elapsed = time.time() - t
+print(elapsed, "sec elapsed")
 
 #%% Play results
 play_2d_results(M, LS, L, S, width, height)

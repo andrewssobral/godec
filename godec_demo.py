@@ -21,7 +21,7 @@ def process_video_file(input_file, debug=False):
     # If the input is the camera, pass 0 instead of the video file name
     cap = cv.VideoCapture(input_file)
 
-    # Check if camera opened successfully
+    # Check if video was opened successfully
     if not cap.isOpened():
         print("Error opening video stream or file")
 
