@@ -1,5 +1,5 @@
 # GoDec
-Python implementation of the GoDec algorithm from [Zhou and Tao (ICML 2011)](http://www.icml-2011.org/papers/41_icmlpaper.pdf) for low-rank and sparse representation.
+Python implementation of the GoDec algorithm from [Zhou and Tao (ICML 2011)](http://www.icml-2011.org/papers/41_icmlpaper.pdf) for low-rank and sparse representation. GoDec is one of the most efficient algorithm for low-rank and sparse decomposition thanks to bilateral random projections (BRP), a fast approximation of SVD/PCA.
 
 <p align="center"><img src="https://github.com/andrewssobral/godec/raw/master/doc/images/results_highway.png" width="50%" /></p>
 
